@@ -1,0 +1,20 @@
+baseurl = "http://jhyoon0801.github.io/blogs"
+languageCode = "us-en"
+title = "Welcome to jhyoon's blogs"
+copyright = "Copyright &#169; by jhyoon"
+canonifyurls = true
+publishdir = "public"
+contentdir = "content"
+theme = "grid-side"
+SectionPagesMenu = "Main"
+
+[Params.Header]
+    name = "jhyoon"
+    description = "server programmer"
+    email = "jhyoon0801@gmail.com"
+    image = "/img/background.jpg"
+
+ [[Params.Cells.List]]
+            name = "Blogs"
+            link = "/blogs/"
+            color = "blue"
