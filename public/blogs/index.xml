@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to jhyoon&#39;s blogs</title>
-    <link>http://jhyoon0801.github.io/blog/</link>
-    <description>Recent content on Welcome to jhyoon&#39;s blogs</description>
+    <title>Blogs on Welcome to jhyoon&#39;s blogs</title>
+    <link>http://jhyoon0801.github.io/blog/blogs/</link>
+    <description>Recent content in Blogs on Welcome to jhyoon&#39;s blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>us-en</language>
     <copyright>Copyright &amp;#169; by jhyoon</copyright>
     <lastBuildDate>Fri, 01 Apr 2016 14:00:00 +0000</lastBuildDate>
-    <atom:link href="http://jhyoon0801.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jhyoon0801.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Spring MVC 기초 - 1</title>
