@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spring Mvc on Welcome to jhyoon&#39;s blogs</title>
-    <link>http://jhyoon0801.github.io/blog/categories/spring-mvc/</link>
+    <link>http://jhyoon0801.github.io/blogs/categories/spring-mvc/</link>
     <description>Recent content in Spring Mvc on Welcome to jhyoon&#39;s blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>us-en</language>
     <copyright>Copyright &amp;#169; by jhyoon</copyright>
     <lastBuildDate>Fri, 01 Apr 2016 14:00:00 +0000</lastBuildDate>
-    <atom:link href="http://jhyoon0801.github.io/blog/categories/spring-mvc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jhyoon0801.github.io/blogs/categories/spring-mvc/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Spring MVC 기초 - 1</title>
-      <link>http://jhyoon0801.github.io/blog/blogs/spring-mvc-base-1/</link>
+      <link>http://jhyoon0801.github.io/blogs/blogs/spring-mvc-base-1/</link>
       <pubDate>Fri, 01 Apr 2016 14:00:00 +0000</pubDate>
       
-      <guid>http://jhyoon0801.github.io/blog/blogs/spring-mvc-base-1/</guid>
+      <guid>http://jhyoon0801.github.io/blogs/blogs/spring-mvc-base-1/</guid>
       <description>
 
 &lt;h3 id=&#34;spring-mvc-기초-1:86650347214547cb075f66c4dc7127f9&#34;&gt;Spring MVC 기초 - 1&lt;/h3&gt;

@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://jhyoon0801.github.io/blog/</loc>
+    <loc>http://jhyoon0801.github.io/blogs/</loc>
     <lastmod>2016-04-01T14:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jhyoon0801.github.io/blog/blogs/spring-mvc-base-1/</loc>
+    <loc>http://jhyoon0801.github.io/blogs/blogs/spring-mvc-base-1/</loc>
     <lastmod>2016-04-01T14:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jhyoon0801.github.io/blog/blogs/summary-implementation-pattern/</loc>
+    <loc>http://jhyoon0801.github.io/blogs/blogs/summary-implementation-pattern/</loc>
     <lastmod>2016-03-30T15:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jhyoon0801.github.io/blog/blogs/summary-to-use-git/</loc>
+    <loc>http://jhyoon0801.github.io/blogs/blogs/summary-to-use-git/</loc>
     <lastmod>2016-03-25T05:18:14+00:00</lastmod>
   </url>
   

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Welcome to jhyoon&#39;s blogs</title>
-    <link>http://jhyoon0801.github.io/blog/blogs/</link>
+    <link>http://jhyoon0801.github.io/blogs/blogs/</link>
     <description>Recent content in Blogs on Welcome to jhyoon&#39;s blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>us-en</language>
     <copyright>Copyright &amp;#169; by jhyoon</copyright>
     <lastBuildDate>Fri, 01 Apr 2016 14:00:00 +0000</lastBuildDate>
-    <atom:link href="http://jhyoon0801.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jhyoon0801.github.io/blogs/blogs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Spring MVC 기초 - 1</title>
-      <link>http://jhyoon0801.github.io/blog/blogs/spring-mvc-base-1/</link>
+      <link>http://jhyoon0801.github.io/blogs/blogs/spring-mvc-base-1/</link>
       <pubDate>Fri, 01 Apr 2016 14:00:00 +0000</pubDate>
       
-      <guid>http://jhyoon0801.github.io/blog/blogs/spring-mvc-base-1/</guid>
+      <guid>http://jhyoon0801.github.io/blogs/blogs/spring-mvc-base-1/</guid>
       <description>
 
 &lt;h3 id=&#34;spring-mvc-기초-1:86650347214547cb075f66c4dc7127f9&#34;&gt;Spring MVC 기초 - 1&lt;/h3&gt;
@@ -81,10 +81,10 @@
     
     <item>
       <title>켄트 벡의 구현 패턴</title>
-      <link>http://jhyoon0801.github.io/blog/blogs/summary-implementation-pattern/</link>
+      <link>http://jhyoon0801.github.io/blogs/blogs/summary-implementation-pattern/</link>
       <pubDate>Wed, 30 Mar 2016 15:00:00 +0000</pubDate>
       
-      <guid>http://jhyoon0801.github.io/blog/blogs/summary-implementation-pattern/</guid>
+      <guid>http://jhyoon0801.github.io/blogs/blogs/summary-implementation-pattern/</guid>
       <description>
 
 &lt;p&gt;켄트 벡의 구현 패턴을 학습하고 내용을 요약해서 프로그램 작성 시 주기적으로 참고하자.&lt;/p&gt;
@@ -273,10 +273,10 @@
     
     <item>
       <title>summary to use git</title>
-      <link>http://jhyoon0801.github.io/blog/blogs/summary-to-use-git/</link>
+      <link>http://jhyoon0801.github.io/blogs/blogs/summary-to-use-git/</link>
       <pubDate>Fri, 25 Mar 2016 05:18:14 +0000</pubDate>
       
-      <guid>http://jhyoon0801.github.io/blog/blogs/summary-to-use-git/</guid>
+      <guid>http://jhyoon0801.github.io/blogs/blogs/summary-to-use-git/</guid>
       <description>
 
 &lt;h3 id=&#34;git-사용-방법-정리:6079bd2b1a3140ad7c7d8b2b573633f0&#34;&gt;Git 사용 방법 정리&lt;/h3&gt;

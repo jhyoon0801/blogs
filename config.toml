@@ -1,4 +1,4 @@
-baseurl = "http://jhyoon0801.github.io/blog"
+baseurl = "http://jhyoon0801.github.io/blogs"
 languageCode = "us-en"
 title = "Welcome to jhyoon's blogs"
 copyright = "Copyright &#169; by jhyoon"
@@ -16,5 +16,5 @@ SectionPagesMenu = "Main"
 
  [[Params.Cells.List]]
             name = "Blogs"
-            link = "http://jhyoon0801.github.io/blog/blogs/"
+            link = "/blogs/"
             color = "blue"
