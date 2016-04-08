@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Welcome to jhyoon&#39;s blogs</title>
-    <link>http://jhyoon0801.github.io/blogs/</link>
+    <link>http://jhyoon0801.github.io/</link>
     <description>Recent content on Welcome to jhyoon&#39;s blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>us-en</language>
     <copyright>Copyright &amp;#169; by jhyoon</copyright>
-    <atom:link href="http://jhyoon0801.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jhyoon0801.github.io/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
