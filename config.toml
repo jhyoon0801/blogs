@@ -16,5 +16,5 @@ SectionPagesMenu = "Main"
 
  [[Params.Cells.List]]
             name = "Blogs"
-            link = "/blogs/"
+            link = "http://jhyoon0801.github.io/blog/blogs/"
             color = "blue"
