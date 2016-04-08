@@ -1,1 +1,1 @@
-# jhyoon0801.github.io
+# http://jhyoon0801.github.io/blogs/
