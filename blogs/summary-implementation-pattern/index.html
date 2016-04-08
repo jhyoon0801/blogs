@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html 
+    lang="us-en"
+    class="no-js"
+>
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    
+    <meta name="generator" content="Hugo 0.16-DEV" />
+    <meta name="generation-date" content="2016-04-08 05:18:47.604935223 &#43;0000 UTC">
+    <title>켄트 벡의 구현 패턴 &middot; Welcome to jhyoon&#39;s blogs</title>
+    <link rel="shortcut icon" href="http://jhyoon0801.github.io/blogimg/favicon.ico">
+    <link rel="icon" href="http://jhyoon0801.github.io/blogimg/favicon.ico">
+    
+<link rel="stylesheet" href="http://jhyoon0801.github.io/blogcss/materialize.min.css">
+
+
+<link rel="stylesheet" href="http://jhyoon0801.github.io/blogcss/font-awesome.min.css">
+
+
+
+
+<link rel="stylesheet" href="http://jhyoon0801.github.io/blogcss/lightbox.css">
+
+
+<link rel="stylesheet" href="http://jhyoon0801.github.io/blogcss/main.css">
+
+
+    <script src="http://jhyoon0801.github.io/blogjs/modernizr-latest.js"></script>
+    <script src="http://jhyoon0801.github.io/blogjs/lazysizes.min.js"></script>
+    <script src="http://jhyoon0801.github.io/blogjs/ls.noscript.min.js"></script>
+
+    <script>
+        window.lazySizesConfig = window.lazySizesConfig || {};
+        lazySizesConfig.addClasses = true;
+        lazySizesConfig.loadMode = 2;
+    </script>
+
+    
+</head>
+
+
+
+<body class="page-colors minimum-viewport-height">
+    
+
+<nav class="main-menu menu-colors">
+    <ul class="menu menu-colors no-list-float">
+        <li><a href="http://jhyoon0801.github.io/blog"><i class="fa fa-home fa-2x"></i></a></li>
+        <li>
+            <a href="#!"><i class="fa fa-bars fa-2x"></i></a>
+
+            
+            <ul class="menu flexible-width menu-colors no-list-float">
+                
+                
+                    <li class="active">
+                    
+                        <a href="http://jhyoon0801.github.io/blog/blogs">
+                            
+                            <span>Blogs</span>
+                        </a>
+                    
+                    </li>
+                
+            </ul>
+        </li>
+        <li><a href="#!" data-lightbox-id="searchbox"><i class="fa fa-search fa-2x"></i></a></li>
+        
+        <li class="blue-grey-text" style="border-top: 1px solid;"></li>
+        <li>
+            <a href="" type="application/rss+xml" target="_blank">
+                <i class="fa fa-rss fa-2x"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<div id="searchbox" class="no-display">
+    <div class="valign-wrapper fill-container">
+        <div class="valign large-form horizontal-center-hack">
+            <form method="get" id="search" action="http://duckduckgo.com/">
+    <input type="hidden" name="sites"value="http://jhyoon0801.github.io/blog"/>
+    <input type="hidden" name="ka" value="h"/>
+    <input type="hidden" name="k7" value="#fafafa"/>
+    <input type="hidden" name="kj" value="#3f3f3f"/>
+    <input type="hidden" name="ky" value="#fafafa"/>
+    <input type="hidden" name="kx" value="b"/>
+    <input type="hidden" name="kt" value="Helvetica"/>
+    <input type="text" name="q" maxlength="255" placeholder="Search"/>
+    <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" />
+</form>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    <div class="main-content">
+        <div class="center-space">
+            <div class="article-colors">
+                
+                <article>
+                    <header>
+                        <h1 class="article-title">켄트 벡의 구현 패턴</h1>
+                        <time class="date-color">Wed Mar 30, 2016</time>
+                        <span class="separator">|</span>
+                        
+<ul class="categories">
+    <li>
+        <i class="fa fa-book"></i>
+    </li>
+    
+        <li><a href="http://jhyoon0801.github.io/blogcategories/progmmaing">progmmaing</a></li>
+    
+</ul>
+
+
+                        <span class="separator">|</span>
+                        
+<ul class="tags">
+    <li>
+        <i class="fa fa-tags"></i>
+    </li>
+    
+        <li><a href="http://jhyoon0801.github.io/blogtags/programming">programming</a></li>
+    
+        <li><a href="http://jhyoon0801.github.io/blogtags/summary">summary</a></li>
+    
+</ul>
+
+
+                    </header>
+
+                    <hr>
+
+                    <section>
+                        
+                            
+
+<p>켄트 벡의 구현 패턴을 학습하고 내용을 요약해서 프로그램 작성 시 주기적으로 참고하자.</p>
+
+<hr />
+
+<h3 id="책-글귀-모음:ababa2ccd2a5041e1cd4b089e7065c53">책 글귀 모음</h3>
+
+<p><code>-</code> 패턴은 반복적으로 일어나는 문제에 대한 합리적인 해결책을 제공해서 프로그래머가 남는 시간과 에너지, 창의력을 진정 독창적인 문제 해결에 사용할 수 있게 해준다.</p>
+
+<p><code>-</code> 프로그래밍 이론은 프로그래밍을 어떻게 해야하고 왜 그렇게 해야 하는지에 대한 이유를 알려준다.</p>
+
+<p><code>-</code> Knuth왈 프로그램은 책처럼 읽을 수 있어야 한다. 스토리와 리듬감을 지니고 상큼한 표현을 지녀야 한다.(Literate Programming, 글로 쓰는 프로그래밍)</p>
+
+<p><code>-</code> 소프트웨어 비용의 대부분은 소프트웨어가 개발된 후에 발생한다.</p>
+
+<p><code>-</code> 복잡도를 낮추면 프로그램을 읽고 사용하고 수정하는 사람들이 프로그램을 훨씬 빨리 이해할 수 있다.</p>
+
+<p><code>-</code> 과도한 복잡도를 제거하면 코드를 새로운 관점에서 바라볼 수 있다.</p>
+
+<p><code>-</code> 앞으로 이득을 얻을 수 있을지 불확실한 패턴의 경우에는 일단 사용을 자제하는 편이 좋다.</p>
+
+<p><code>-</code> 원칙을 명확히 이해하고 있다면, 새로운 상황에 부딪혔을 때 적절히 대처할 수 있다.</p>
+
+<p><code>-</code> 각 패턴은 커뮤니케이션, 단순성, 유연성의 가치 중 하나 이상을 내포하고 있다.</p>
+
+<p><code>-</code> 패턴이란 프로그래밍에서 반복적으로 접하게 되는 문제를 구체적으로 해결하는 방법이다.</p>
+
+<p><code>-</code> 커뮤니케이션하기 쉬운 코드를 짬으로써, 유지 비용을 줄인다.</p>
+
+<p><code>-</code> 패턴을 사용하는 버릇을 들이면, 읽고 이해하고 수정하기 쉬운 코드를 작성할 수 있고, 더 빠르고 자연스럽게 코드를 짤 수 있다.</p>
+
+<p><code>-</code> 디자인 패턴은 클래스 간의 관계를 다루는 것이다.</p>
+
+<p><code>-</code> 플라톤은 현실 세계에 존재하는 것은 클래스의 인스턴스일 뿐이라고 이야기 했다네..</p>
+
+<p><br></p>
+
+<h3 id="프로그래밍-이론:ababa2ccd2a5041e1cd4b089e7065c53">프로그래밍 이론</h3>
+
+<p>실제 프로그래밍에서는 각 패턴에서 설명하는 이론 외에도 가치와 원칙의 두 가지가 패턴의 결정 사항에 영향을 미친다. <br>
+가치는 모든 프로그래밍에 적용되는 주제이며, 원칙은 어떤 패턴도 적용할 수 없는 경우나 두 개의 패턴 중 하나를 선택해야 할 경우 빛을 발한다.</p>
+
+<p><em>패턴은 지금 당장 무엇을 해야 할지를 알려주고, 가치는 패턴을 사용해야 하는 동기를 알려주며, 원칙은 동기를 행동으로 어떻게 바꿔줄지 알려준다.</em>
+<br><br></p>
+
+<h4 id="가치:ababa2ccd2a5041e1cd4b089e7065c53">가치</h4>
+
+<p>최고의 프로그래머는 프로그램의 확장성을 고려해서 프로그램을 짜지만, 불필요한 요소를 사용하지 않으며, 읽고 이해하기 쉬운 프로그램을 짠다.<br></p>
+
+<h5 id="커뮤니케이션:ababa2ccd2a5041e1cd4b089e7065c53">커뮤니케이션</h5>
+
+<p>개발자가 코드를 쉽게 이해하고, 수정하고, 사용할 수 있다면 그 코드는 개발자와 커뮤니케이션을 하고 있다고 이야기할 수 있다.<br>
+프로그램을 작성할 때 CPU 뿐만 아니라, 커뮤니케이션에 초점을 맞춰 타인을 고려하면 경제적으로도 높은 효과가 있다. 소프트웨어 비용의 대부분은 소프트웨어가 개발된 후에 발생하기 때문이다.
+<br></p>
+
+<h5 id="단순성:ababa2ccd2a5041e1cd4b089e7065c53">단순성</h5>
+
+<p>복잡도를 낮추면 사람들이 프로그램을 훨씬 빨리 이해할 수 있고, 이를 통해 경제적인 효과를 볼 수 있다. <br>
+프로그램을 최대한 단순화하고, 의미없는 코드는 모두 제거하라. 설계시에도 과도한 요소는 모두 빼고, 요구 사항을 분석해서 꼭 필요한 사항만을 뽑아내어 복잡도를 제거하면 코드를 새로운 관점에서 바라볼 수 있다.
+<br></p>
+
+<h5 id="유연성:ababa2ccd2a5041e1cd4b089e7065c53">유연성</h5>
+
+<p>유연성은 비효율적인 코딩이나 설계를 정당화해주는 가치이다. 프로그램은 유연해야 하지만, 프로그램이 발전하는 방향으로 유연해야함을 꼭 생각하자.<br>
+앞으로 이득이 있을지 없을지 모르는 불확실한 패턴을 사용하는 것 보단, 당장 이득을 얻을 수 있는 패턴을 사용한다.<br>
+단순성은 유연성을 촉진시킨다. 단순한 프로그램은 수정이 매우 간단하기 때문이다.<br>
+커뮤니케이션을 중시하면 유연성도 좋아진다. 읽기와 수정이 좋은 코드는 조직이 미래에 취할 수 있는 전략의 폭이 넓어진다.
+<br><br></p>
+
+<h4 id="원칙:ababa2ccd2a5041e1cd4b089e7065c53">원칙</h4>
+
+<p>원칙은 가치에 비해 좀 더 프로그래밍에 특화된 개념이지만 가치와 함께 패턴의 근간을 이룬다.<br>
+원칙을 이해하고 있다면 패턴을 사용하는 근본적인 이유에 대해 알 수 있으므로 새로운 상황에 부딪혔을 때 적절히 대처할 수 있다.
+<br></p>
+
+<h5 id="지역적-변화:ababa2ccd2a5041e1cd4b089e7065c53">지역적 변화</h5>
+
+<p>코드를 수정할 때 함께 바꿔야 하는 부분을 최소화한다. 지역적 변화만을 일으키는 코드는 커뮤니케이션이 쉽기 때문이다.
+<br></p>
+
+<h5 id="최소-중복:ababa2ccd2a5041e1cd4b089e7065c53">최소 중복</h5>
+
+<p>중복된 코드가 많으면 많을 수록 코드 수정은 어려워진다. 또한 단순히 코드만이 아닌 병렬 클래스 계층(parallel class hierarchy)도 중복의 일종이다. 프로그램상의 어떤 개념을 수정했을 때 2개 이상의 클래스 계층을 수정해야 한다면, 이러한 수정은 지역적 변화의 원칙을 위배하는 것이다.<br>
+중복을 없애는 방법 중 한 가지는 프로그램을 여러 작은 부분으로 나누는 것이다.
+<br></p>
+
+<h5 id="로직과-데이터의-결합:ababa2ccd2a5041e1cd4b089e7065c53">로직과 데이터의 결합</h5>
+
+<p>보통 프로그램을 수정할 때는 로직과 데이터를 모두 수정해야할 경우가 많기 때문에, 데이터와 그 데이터를 처리하는 로직을 밀접하게 배치한다. 이는 프로그램을 수정하더라도 그 영향이 일정 영역에 머물게 된다.
+<br></p>
+
+<h5 id="대칭성:ababa2ccd2a5041e1cd4b089e7065c53">대칭성</h5>
+
+<p>코드의 대칭성은 하나의 아이디어를 프로그램 전체에서 일관된 방식으로 표현하는 통일성이라고 할 수 있다. 따라서 프로그램에서 대칭성을 찾아내서 명확히 표현해주면, 코드를 읽기가 수월해진다. <br>
+때로 대칭성을 찾아서 표현하면 코드의 중복을 제거할 수 있다. 비슷한 아이디어가 사용되었다면 대칭성에 따라 아이디어를 일관된 방식으로 표현하고, 이는 중복되는 구현을 제거하는 기회가 될 수도 있다.
+<br></p>
+
+<h5 id="선언적-표현:ababa2ccd2a5041e1cd4b089e7065c53">선언적 표현</h5>
+
+<p>복잡한 로직이 없다면 수행되는 로직을 선언적 표현을 사용하여 명시하고, 이를 통해 코드를 직관적으로 쉽게 이해할 수 있도록 한다.
+<br></p>
+
+<h5 id="변화율:ababa2ccd2a5041e1cd4b089e7065c53">변화율</h5>
+
+<p>함께 변하는 로직과 데이터를 함께 관리하고, 변화율이 다른 로직과 데이터는 분리한다. 이는 로직과 데이터의 결합과는 다른 내용이다. 앞선 내용은 연관 관계에 대한 내용이며, 변화율은 시간적 대칭성으로 이해할 수 있다.(코드의 변화 주기로 생각하자)<br>
+변화율은 로직과 데이터 뿐만 아니라 데이터와 데이터에도 적용된다. 하나의 객체에 있는 모든 필드는 가급적 함께 변해야 하고, 변화율이 다른 필드가 있다면 이를 적절하게 분리하여 별도의 객체로 관리하도록 한다. 이는 코드를 읽는 다른 사람에게 프로그래머의 의도를 잘 전달할 수 있고, 중복을 줄일 수 있다.
+<br><br></p>
+
+<h3 id="클래스:ababa2ccd2a5041e1cd4b089e7065c53">클래스</h3>
+
+<p>클래스는 비슷한 성질을 가진 것을 총칭하며, 객체는 클래스가 구체화된 것이다.<br>
+1. 로직을 클래스 단위로 어떻게 구성해야 하는지, 로직 사이의 차이점을 어떻게 효과적으로 표현해야 하는지 배워야 한다. <br>
+2. 클래스 계층을 사용하는 것은 코드를 이해하는데 어려움을 준다. 따라서 효과적인 객체 지향 프로그래밍을 하기 위해서는 선별적으로 상속을 사용한다.<br>
+3. 클래스는 비교적 값이 비싼 편이므로, 의미 있는 작업에만 클래스를 사용해야 한다. 클래스를 너무 비대하지 않게, 전체 클래스 개수를 줄이는 방향으로 프로그램을 개선한다.<br></p>
+
+<h5 id="단순한-상위클래스-이름:ababa2ccd2a5041e1cd4b089e7065c53">단순한 상위클래스 이름</h5>
+
+<p>적합한 이름은 코드를 단순화하고 향상시켜준다.<br>
+1. 클래스 이름을 지을 때는 간결성과 표현성 사이에서 고민하며, 조금 더 정확한 의미를 전달하기 위해 몇 개의 단어를 사용해야 하는 경우도 있다.<br>
+2. 메타포(metaphor, 은유)를 사용하여 단어 하나만으로 연상작용을 통해 여러 관련 정보와 내포된 의미를 전달한다.<br>
+3. 중요한 클래스에 대해서는 한 단어로 된 이름을 사용하자.<br></p>
+
+<h5 id="한정적-하위클래스-이름:ababa2ccd2a5041e1cd4b089e7065c53">한정적 하위클래스 이름</h5>
+
+<p>하위클래스 이름은 상위클래스와의 유사점과 차이점을 나타내야 하고, 클래스의 이름은 코드의 내용을 반영해야 한다.<br>
+1. 하위클래스는 최상위 클래스와는 달리 대화 중 잘 사용되지 않는다. <br>
+2. 간결성보다는 표현성을 택하는 편이 낫다.<br>
+3. 상위클래스에 한 두 개의 수식어를 붙여서 이름을 정한다.<br>
+4. 하지만 그 자체로 프로그램의 중요한 개념을 의미하는 하위클래스는 상위클래스와 같이 단순한 이름을 사용해야 한다.<br>
+5. 다단계 클래스 계층(multi-level hierarchy)의 이름은 가장 유사한 상위클래스의 이름을 바탕으로 짓는다.(위임을 통해 다단계 클래스 계층을 제거하면 더 좋다)<br></p>
+
+<h5 id="추상-인터페이스:ababa2ccd2a5041e1cd4b089e7065c53">추상 인터페이스</h5>
+
+<p>설계상의 결정을 필요 이상으로 노출하지 않기 위해 인터페이스에 맞춰 코딩한다.<br>
+1. 인터페이스 추가에는 문서화 및 디버깅 등의 추가 비용이 발생하기 때문에 인터페이스를 통해 유연성을 얻을 수 있는 경우에만 인터페이스 비용을 지불한다.(실제로는 유연성이 필요하지 않은 경우가 많다)<br>
+2. 인터페이스를 사용하게 된 경제적 이유는 소프트웨어는 예측하기 어렵다는 점을 들 수 있다. 하지만 예측을 통해 &ldquo;미래에도 제대로 동작하는&rdquo; 소프트웨어를 개발하는 데에는 한계가 있다.<br>
+3. 결론은 필요해지는 경우에만 시스템에 유연성을 부여하자.(어렵다..)<br></p>
+
+<h5 id="인터페이스:ababa2ccd2a5041e1cd4b089e7065c53">인터페이스</h5>
+
+<p>인터페이스는 다중 상속을 통해 유연성을 제공하면서도 복잡성과 모호성을 갖고 있지 않는 메커니즘이다.<br>
+1. 인터페이스는 구현의 수정은 쉽지만 인터페이스 자체의 수정은 매우 어렵다.<br>
+2. 인터페이스가 커뮤니케이션에 방해가 되는 요소 중 한 가지는 모든 연산이 공용이어야 한다는 점이다.(공용이라는 말이 모든 메소드가 public이라는 의미인가??)<br>
+3. 상위클래스와 하위클래스의 이름 정하는 방법으로 인터페이스의 이름을 정하는 방법이 있다. 장점은 인터페이스 구현과 상위클래스 상속 여부가 가려진다는 것이고, 단점은 좋은 이름을 인터페이스가 모두 사용하는 것이다.<br>
+4. 인터페이스 사용 여부를 숨기는 것보다 구현 클래스이 이름을 간결하게 짓는 것이 중요할 경우 인터페이스 이름에 &ldquo;I&rdquo;를 붙이는 방법도 있다.<br></p>
+
+<h5 id="추상-클래스:ababa2ccd2a5041e1cd4b089e7065c53">추상 클래스</h5>
+
+<p>자바에서 인터페이스와 실제 구현의 차이를 나타내는 다른 방법은 상위클래스(런타임에 어떤 하위클래스로도 교체될지 모른다는 넓은 의미, not only abstract class)를 사용하는 것이다.(polymorphism)<br>
+1. 추상클래스와 인터페이스의 사용 기준은 인터페이스 수정의 용이성과 단일 클래스가 여러 인터페이스를 지원할 것인지의 여부이다.<br>
+2. 추상클래스는 인터페이스와는 달리 기존 설계를 망가뜨리지 않고 새로운 연산을 얼마든지 추가할 수 있다.<br>
+3. 추상 클래스의 단점은 각 클래스가 단 1개의 상위클래스만을 지정할 수 있다는 것이다. 이는 다양한 인터페이스의 지원이 불가능함을 의미한다.<br>
+4. 과도한 추상화는 필요없는 추상 클래스 계층을 만들어 낼 수 있다. 이는 최상위 클래스를 인스턴스화 가능한 클래스로 만들면 일부 해결 가능하다.<br></p>
+
+<h5 id="버전-인터페이스:ababa2ccd2a5041e1cd4b089e7065c53">버전 인터페이스</h5>
+
+<p>인터페이스를 수정하면 기존 인터페이스를 구현한 클래스는 사용하지 못하게 된다. 이를 해결하기 위한 방법은 인터페이스를 확장(extends)하여 대체 인터페이스를 생성하는 것이다. 하지만 대체 인터페이스는 달갑지 않은 문제(인터페이스 수정의 필요성)에 대한 달갑지 않은 해결책(유연성이 떨어진다)이다. 이는 자바를 올바르게 사용하는 것이라고 볼 수 없다.<br>
+1. 인터페이스를 확장하면 새로운 사용자와 기존 사용자 모두 해당 인터페이스를 사용할 수 있다.<br>
+2. 새로운 연산을 사용하는 경우, 객체의 타입을 확인한 후(reflection, instanceof) 타입 캐스팅이 필요하다. <br>
+3. instanceof는 코드가 특정 클래스에 제한되므로 유연성이 떨어지지만 인터페이스의 개선이라는 측면에서 정당성을 갖는다.<br>
+4. 새로 확장한 대체 인터페이스의 수가 많아지면 이는 설계를 수정할 때가 되었다는 신호이다.<br></p>
+
+<h5 id="값-객체-내용을-잘-이해하기-힘듬:ababa2ccd2a5041e1cd4b089e7065c53">값 객체(내용을 잘 이해하기 힘듬)</h5>
+
+<p>값 객체(값 스타일 객체)는 변화하는 상태를 지닌 객체가 아닌, 정수와 같이 상태가 변하지 않는 객체를 의미한다.<br>
+1. 자바의 기본 타입은 대부분 수학의 세계에 속하며, 수학의 세계는 함수형 스타일 연산을 사용한다. 함수형 스타일(functional style)연산은 상태를 변화시키지 않고 새로운 값을 생성하는 것이다.<br>
+2. 상황이 계속 변환다면 상태 객체(값 객체의 반대라고 생각하자)를, 일시적으로라도 고정적인 상황을 표현하고 싶다면 함수형 스타일을 사용하여 값 객체를 사용한다.<br>
+3. 값 객체는 생성자에서만 모든 상태를 설정할 수 있고, 이를 다루는 연산은 언제나 새로운 객체를 반환한다.<br>
+4. 값 객체는 매번 새롭게 생성되기 때문에 메모리 관리 시스템에 부담을 주어 성능상 문제를 일으킬 수 있다. <br></p>
+
+<h5 id="특화:ababa2ccd2a5041e1cd4b089e7065c53">특화</h5>
+
+<p>대부분의 프로그램에서 사용하는 아이디어는 비슷한 점이 많다. 따라서 각 연산 간의 유사점과 차이점을 부각시켜 코드를 작성하면  프로그램을 읽고 수정하기 쉬워진다. 이는 사용자가 기존의 코드를 변형하고 특화시켜 재활용할지, 전혀 새로운 코드를 작성할지의 여부를 결정하는데 도움이 된다. <br>
+연산(computaton) : imformation processing in general(wikipedia)
+1. 가장 간단한 변형는 상태만 바꾸는 것이다. 수행되는 알고리즘은 변화하지 않는다.(데이터 타입만 바뀌는 경우. generics?)<br>
+2. 가장 복잡한 변형는 로직을 바꾸는 것이다. 입력이 같아도 로직은 완전히 다르다.(generics도 포함될 수 있겠음. sort같은 알고리즘)
+3. 대부분의 변형은 위의 두 가지의 극단적 변형 사이에 존재하며, 현실에서는 약간 변형된 입력 데이터를 사용하거나 약간 변형된 로직을 사용하는 경우가 많다.<br></p>
+
+<h5 id="하위클래스:ababa2ccd2a5041e1cd4b089e7065c53">하위클래스</h5>
+
+<p>하위클래스는 기존 코드의 변형 중 한 방법으로 제대로 된 상위클래스를 갖고 있다면 강력한 힘을 발휘할 수 있다. 적당한 메소드를 오버라이드하여 기존 연산과는 다른 변형을 만들어 낼 수 있기 때문이다.<br>
+1.</p>
+
+                        
+                    </section>
+
+                    <footer class="right-align">
+                        <p><small>Copyright &#169; by jhyoon</small></p>
+                    </footer>
+
+                    
+
+
+                </article>
+            </div>
+        </div>
+    </div>
+
+    
+<script src="http://jhyoon0801.github.io/blogjs/jquery-2.1.4.min.js"></script>
+
+
+<script src="http://jhyoon0801.github.io/blogjs/materialize.min.js"></script>
+
+
+<script src="http://jhyoon0801.github.io/blogjs/imagesloaded.pkgd.min.js"></script>
+
+
+<script src="http://jhyoon0801.github.io/blogjs/masonry.pkgd.min.js"></script>
+
+
+
+
+<script src="http://jhyoon0801.github.io/blogjs/lightbox.min.js"></script>
+
+
+<script src="http://jhyoon0801.github.io/blogjs/jquery.infinitescroll.min.js"></script>
+
+
+<script src="http://jhyoon0801.github.io/blogjs/main.js"></script>
+
+
+</body>
+
+</html>
+
+
+
+
+
