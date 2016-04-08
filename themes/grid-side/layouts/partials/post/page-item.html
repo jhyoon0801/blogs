@@ -1,0 +1,24 @@
+{{ $baseUrl := .Site.BaseURL }}
+<div class="page-item-container">
+    {{ with .Params.image }}
+        <img src="{{ $baseUrl }}{{ . }}" class="page-item-image"></img>
+    {{ end }}
+    <div class="page-item-content">
+        <header>
+            {{ if not .Date.IsZero }}
+                <time class="page-item-date">{{ .Date.Format "Mon Jan 02, 2006" }}</time>
+            {{ end }}
+            <h2 class="page-item-title">{{ .Title }}</h2>
+        </header>
+        <p class="page-item-summary">{{ .Summary }}</p>
+        <a href="{{ .Permalink }}" class="page-item-btn {{ if .Params.redirect }}page-item-btn-red{{ end }}">
+            {{ if .Params.redirect }}Redirect{{ else }}Read More{{ end }}
+        </a>
+        <footer>
+            {{ partial "extra/categories.html" . }}
+            <span class="separator">|</span>
+            {{ partial "extra/tags.html" . }}
+        </footer>
+    </div>
+</div>
+
