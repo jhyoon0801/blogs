@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Progmmaing on Welcome to jhyoon&#39;s blogs</title>
-    <link>http://jhyoon0801.github.io/blog/categories/progmmaing/</link>
+    <link>http://jhyoon0801.github.io/blogs/categories/progmmaing/</link>
     <description>Recent content in Progmmaing on Welcome to jhyoon&#39;s blogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>us-en</language>
     <copyright>Copyright &amp;#169; by jhyoon</copyright>
     <lastBuildDate>Fri, 01 Apr 2016 14:00:00 +0000</lastBuildDate>
-    <atom:link href="http://jhyoon0801.github.io/blog/categories/progmmaing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jhyoon0801.github.io/blogs/categories/progmmaing/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Spring MVC 기초 - 1</title>
-      <link>http://jhyoon0801.github.io/blog/blogs/spring-mvc-base-1/</link>
+      <link>http://jhyoon0801.github.io/blogs/blogs/spring-mvc-base-1/</link>
       <pubDate>Fri, 01 Apr 2016 14:00:00 +0000</pubDate>
       
-      <guid>http://jhyoon0801.github.io/blog/blogs/spring-mvc-base-1/</guid>
+      <guid>http://jhyoon0801.github.io/blogs/blogs/spring-mvc-base-1/</guid>
       <description>
 
 &lt;h3 id=&#34;spring-mvc-기초-1:86650347214547cb075f66c4dc7127f9&#34;&gt;Spring MVC 기초 - 1&lt;/h3&gt;
@@ -81,10 +81,10 @@
     
     <item>
       <title>켄트 벡의 구현 패턴</title>
-      <link>http://jhyoon0801.github.io/blog/blogs/summary-implementation-pattern/</link>
+      <link>http://jhyoon0801.github.io/blogs/blogs/summary-implementation-pattern/</link>
       <pubDate>Wed, 30 Mar 2016 15:00:00 +0000</pubDate>
       
-      <guid>http://jhyoon0801.github.io/blog/blogs/summary-implementation-pattern/</guid>
+      <guid>http://jhyoon0801.github.io/blogs/blogs/summary-implementation-pattern/</guid>
       <description>
 
 &lt;p&gt;켄트 벡의 구현 패턴을 학습하고 내용을 요약해서 프로그램 작성 시 주기적으로 참고하자.&lt;/p&gt;
